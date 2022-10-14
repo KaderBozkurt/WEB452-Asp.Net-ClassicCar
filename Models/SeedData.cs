@@ -16,7 +16,7 @@ namespace ClassicCar.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<CarDbContext>>()))
             {
-                // Look for any movies.
+                // Look for any CARS.
                 if (context.Car.Any())
                 {
                     return;   // DB has been seeded
