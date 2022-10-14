@@ -9,11 +9,13 @@ namespace ClassicCar.Controllers
 {
     public class ClassicCar : Controller
     {
+
+        //GET: /ClassicCar/
         public IActionResult Index()
         {
             return View();
         }
-
+        //GET: /ClassicCar/Welcome/
         public IActionResult Welcome(string name, int numTimes = 1)
         {
             ViewData["Message"] = "Hello " + name;
