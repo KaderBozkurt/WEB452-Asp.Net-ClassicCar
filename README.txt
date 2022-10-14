@@ -12,3 +12,4 @@ this website should have about classic car sales information.
 	Add logo in _Layout.cshtml and change font family and size.
 	when i add image i change fontsize and font family for header, and i change width and height for logo.jpg
 	Change Privacy-ClassicAutoCar.com
+	klmn
