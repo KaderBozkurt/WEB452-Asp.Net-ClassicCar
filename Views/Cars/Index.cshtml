@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table" style="font-family:Rockwell;">
     <thead>
         <tr>
             <th>
@@ -57,7 +57,8 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Ad_Number">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Ad_Number">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Ad_Number">Delete</a>
+                <a asp-action="Delete" asp-route-id="@item.Ad_Number">Delete</a>|
+                <input type="range" min="1" max="5" value="3"class="slider" id="myRange" />
             </td>
         </tr>
 }
