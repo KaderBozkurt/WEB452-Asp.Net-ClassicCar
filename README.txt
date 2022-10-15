@@ -29,7 +29,7 @@ when i add image i change font size and font family for title and change width a
 Change Privacy in footer-ClassicAutoCar.com
 *****************************************************************************************************************
 I first started the project with the product name "Car". After the steps I mentioned above, after adding Scaffold pages, it gave the following error.
-![Test Image 4](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/error.jpg)
+![Test Image 4](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/wwwroot/img/error.jpg)
 
 First, I updated the Nuget Package with its old versions (3.1.16)
 I tried again later but it still gave the same error. I changed the project name to MvcCar and started all over again, but it still gave the same problem in the same place.
