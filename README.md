@@ -55,6 +55,7 @@ My fictitious company's name is ClassicAutoCar, but because it's too long, I jus
 After doing the above steps again, I continued as follows...
 Add NuGet Packages
 This package came with Visual studio installed, but different versions were installed. I changed these versions first.
+
 ![packet](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/pac.jpeg)
 
 I skipped the Create Data folder (because it was loaded) and created the CarDbContext.cs class directly into the existing Data folder. I'm trying to make names unique.
