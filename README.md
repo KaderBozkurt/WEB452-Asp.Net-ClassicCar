@@ -29,7 +29,18 @@ when i add image i change font size and font family for title and change width a
 Change Privacy in footer-ClassicAutoCar.com
 *****************************************************************************************************************
 I first started the project with the product name "Car". After the steps I mentioned above, after adding Scaffold pages, it gave the following error.
+
+![error](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/error.jpeg)
+
+
+
+
+
+
+
 First, I updated the Nuget Package with its old versions (3.1.16)
+Second, I change my code in Car.cs file for primary key
+Add [key]
 I tried again later but it still gave the same error. I changed the project name to MvcCar and started all over again, but it still gave the same problem in the same place.
 I've been searching on the internet but haven't found a solution yet. I tried to solve this problem all day but it didn't work.....
 ****************************************************************************************************************************************************
@@ -41,6 +52,8 @@ My fictitious company's name is ClassicAutoCar, but because it's too long, I jus
 After doing the above steps again, I continued as follows...
 Add NuGet Packages
 This package came with Visual studio installed, but different versions were installed. I changed these versions first.
+![packet](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/pac.jpeg)
+
 I skipped the Create Data folder (because it was loaded) and created the CarDbContext.cs class directly into the existing Data folder. I'm trying to make names unique.
 I changed the connection server connection in the startup.cs file.
 I changed the link to "CarDbContext" in appsettings.json file.
@@ -84,3 +97,15 @@ Just have to wait a bit....
 ******************<19:00pm>**********************************
 I started make referance for image and add....
 I created new logo and add.....
+
+My Car List Page:
+![list](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/list.png)
+
+
+My Home Page:
+![home](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/home.png)
+
+
+My About Us:
+![About](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/about.png)
+
