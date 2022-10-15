@@ -1,11 +1,14 @@
 ﻿10/11/2022
-I decided on a creative website about selling classic cars with ASP.NET MVC.
+ 
 Website name: "ClassicCar.com"
+
+I decided on a creative website about selling classic cars with ASP.NET MVC.
 This website should contain classic car sales information.
 It should also include a list of classic cars for sale.
 There should be pictures of these cars on the homepage, and clicking these pictures will take you to a list with customer reviews.
 
 LET'S START!
+
 Visual Studio 2019 and Asp.Net MVC are used for this website.
 Initialize Default ASP.NET MVC Assignment
 Create New Project/individual/HTTPS
@@ -27,7 +30,6 @@ Change title and date in _Layout.cshtml
 Added logo to _Layout.cshtml and change font family and size.
 when i add image i change font size and font family for title and change width and height for logo.jpg
 Change Privacy in footer-ClassicAutoCar.com
-*****************************************************************************************************************
 I first started the project with the product name "Car". After the steps I mentioned above, after adding Scaffold pages, it gave the following error.
 
 ![error](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/error.jpeg)
@@ -45,6 +47,7 @@ I tried again later but it still gave the same error. I changed the project name
 I've been searching on the internet but haven't found a solution yet. I tried to solve this problem all day but it didn't work.....
 ****************************************************************************************************************************************************
 10/13/2022
+
 I decided to start the project again today, I'm going to go back and change the name and try. 
 As a result of my research on the internet, if the namespace and the class name are the same, it gives this error. 
 This time I will start the name with my campany name, I hope there will be no problems.
@@ -69,7 +72,9 @@ Add-Migration InitialCreate -Contex -CarDbContext
 this part worked but the Update-Database part was not successful.
 I tried it again as "Update-Database -context CarDbContext" but it still didn't work.
 I checked all my codes, especially the migration section, but apparently there is no problem that I see.
-******************<21:00pm>***********************
+
+******************<21:00pm>**************************************************
+
 I went back to the project and looked again..
 still nothing, but when I wrote the error on the internet, I found a few solutions and one of them was to replace the existing context.cs with my own context name. I tried this and changed the already existing context to my own CarDbContext.
 RESULT: It worked... By the way, when we change the file name in Visual studio 2019, the names of all the referenced files also change.
@@ -90,11 +95,13 @@ During the lesson, I could not open the project in any way and it did not work. 
 I was able to open it at the end of the lesson, but I saw my list in SeedData on my own computer, but it does not appear on the school computer...
 I came back home and looked again my list is visible but why not at school???
 
-******************<17:00>*****************
+******************<17:00pm>*****************************
+
 The first time I opened it again on GitHub at school, it did not appear again, but when I did "Build" on the computer I opened and ran it again, it appeared. I hope this is taken into account when grading...
 Just have to wait a bit....
 
-******************<19:00pm>**********************************
+******************<19:00pm>******************************
+
 I started make referance for image and add....
 I created new logo and add.....
 
