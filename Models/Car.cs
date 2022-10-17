@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace ClassicCar.Models
 {
     public class Car
@@ -18,7 +16,10 @@ namespace ClassicCar.Models
         [DataType(DataType.Date)]
         public DateTime AdDate { get; set; }
         public string Fuel { get; set; }
+
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        public string Rating { get; set; }
     }
     public class ApplicationDbContext : DbContext
     {

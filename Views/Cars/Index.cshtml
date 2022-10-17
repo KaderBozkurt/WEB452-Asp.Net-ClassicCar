@@ -1,40 +1,52 @@
-﻿@model IEnumerable<ClassicCar.Models.Car>
+﻿
 
+@model ClassicCar.Models.CarTransmissionViewModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Model"] = "Index";
 }
 
 <h1>Index</h1>
 
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Cars" asp-action="Index" method="get">
+    <p>
+        <select asp-for="CarTransmission" asp-items=" Model.Transmission">
+            <option value="">All</option>
+        </select>
+        Model: <input type="text" name="SearchString" />
+        <input type="submit" valur="Filter" />
+    </p>
+</form>
 <table class="table" style="font-family:Rockwell;">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Model)
+                @Html.DisplayNameFor(model => model.Cars[0].Model)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Color)
+                @Html.DisplayNameFor(model => model.Cars[0].Color)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Transmission)
+                @Html.DisplayNameFor(model => model.Cars[0].Transmission)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AdDate)
+                @Html.DisplayNameFor(model => model.Cars[0].AdDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fuel)
+                @Html.DisplayNameFor(model => model.Cars[0].Fuel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Cars[0].Price)
             </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.Cars[0].Rating)</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model.Cars)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Model)
@@ -55,9 +67,13 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.Ad_Number">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Ad_Number">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Ad_Number">Delete</a>|
+
                 <form class="rating">
                     <label>
                         <input type="radio" name="stars" value="1" />
@@ -92,6 +108,13 @@
                 </form>
             </td>
         </tr>
-}
+
+
+
+
+        }
+
     </tbody>
 </table>
+
+

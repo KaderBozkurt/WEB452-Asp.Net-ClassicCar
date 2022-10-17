@@ -30,7 +30,8 @@ namespace ClassicCar.Models
                         Transmission = "Automatic",
                         AdDate = DateTime.Parse("1989-2-12"),
                         Fuel = "Gas",
-                        Price = 49.99M
+                        Price = 49.99M,
+                        Rating = "4"
                         
                     },
 
@@ -41,7 +42,8 @@ namespace ClassicCar.Models
                         Transmission = "Automatic",
                         AdDate = DateTime.Parse("1989-2-12"),
                         Fuel = "Gas",
-                        Price = 400.99M
+                        Price = 400.99M,
+                        Rating = "3"
                     },
 
                     new Car
@@ -51,7 +53,8 @@ namespace ClassicCar.Models
                         Transmission = "Automatic",
                         AdDate = DateTime.Parse("1989-2-12"),
                         Fuel = "Gas",
-                        Price = 47.99M
+                        Price = 47.99M,
+                        Rating = "2"
                     },
 
                     new Car
@@ -61,7 +64,8 @@ namespace ClassicCar.Models
                         Transmission = "Automatic",
                         AdDate = DateTime.Parse("1972-2-12"),
                         Fuel = "Gas",
-                        Price = 139.99M
+                        Price = 139.99M,
+                        Rating = "4"
                     },
                      new Car
                      {
@@ -70,7 +74,8 @@ namespace ClassicCar.Models
                          Transmission = "Manual",
                          AdDate = DateTime.Parse("1980-2-12"),
                          Fuel = "Gas",
-                         Price = 44.99M
+                         Price = 44.99M,
+                         Rating = "5"
                      },
                       new Car
                       {
@@ -79,7 +84,9 @@ namespace ClassicCar.Models
                           Transmission = "Manual",
                           AdDate = DateTime.Parse("1967-2-12"),
                           Fuel = "Gas",
-                          Price = 129.99M
+                          Price = 129.99M,
+                          Rating = "3"
+
                       },
                        new Car
                        {
@@ -88,7 +95,8 @@ namespace ClassicCar.Models
                            Transmission = "Automatic",
                            AdDate = DateTime.Parse("1989-2-12"),
                            Fuel = "Gas",
-                           Price = 113.99M
+                           Price = 113.99M,
+                           Rating = "2"
                        },
                         new Car
                         {
@@ -97,7 +105,8 @@ namespace ClassicCar.Models
                             Transmission = "Manual",
                             AdDate = DateTime.Parse("1989-2-12"),
                             Fuel = "Gas",
-                            Price = 18.99M
+                            Price = 18.99M,
+                            Rating = "5"
                         },
                          new Car
                          {
@@ -106,7 +115,8 @@ namespace ClassicCar.Models
                              Transmission = "Manual",
                              AdDate = DateTime.Parse("1989-2-12"),
                              Fuel = "Gas",
-                             Price = 100.99M
+                             Price = 100.99M,
+                             Rating = "3"
                          },
                           new Car
                           {
@@ -115,7 +125,8 @@ namespace ClassicCar.Models
                               Transmission = "Automatic",
                               AdDate = DateTime.Parse("1989-2-12"),
                               Fuel = "Gas",
-                              Price = 109.99M
+                              Price = 109.99M,
+                              Rating = "4"
                           }
                 );
                 context.SaveChanges();

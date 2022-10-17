@@ -20,9 +20,26 @@ namespace ClassicCar.Controllers
         }
 
         // GET: Cars
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string carTransmission, string searchString)
         {
-            return View(await _context.Car.ToListAsync());
+            //use LINQ to get list of Transmission
+            IQueryable<string> transmissionQuery = from m in _context.Car orderby m.Transmission select m.Transmission;
+
+            var cars =from m in _context.Car select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                cars = cars.Where(s => s.Model.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(carTransmission))
+            {
+                cars = cars.Where(x => x.Transmission == carTransmission);
+            }
+            var carTransmissionVM = new CarTransmissionViewModel
+            {
+                Transmission = new SelectList(await transmissionQuery.Distinct().ToListAsync()),
+                Cars = await cars.ToListAsync()
+            };
+                return View(carTransmissionVM);
         }
 
         // GET: Cars/Details/5
@@ -54,7 +71,8 @@ namespace ClassicCar.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Ad_Number,Model,Color,Transmission,AdDate,Fuel,Price")] Car car)
+       // [Bind("Ad_Number,Model,Color, Transmission,AdDate,Fuel,Price,Rating ")]
+        public async Task<IActionResult> Create([Bind("Ad_Number,Model,Color,Transmission,AdDate,Fuel,Price,Rating")] Car car)
         {
             if (ModelState.IsValid)
             {
@@ -85,8 +103,9 @@ namespace ClassicCar.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+       // [Bind("Ad_Number,Model,Color, Transmission,AdDate,Fuel,Price,Rating ")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Ad_Number,Model,Color,Transmission,AdDate,Fuel,Price")] Car car)
+        public async Task<IActionResult> Edit(int id, [Bind("Ad_Number,Model,Color,Transmission,AdDate,Fuel,Price,Rating")] Car car)
         {
             if (id != car.Ad_Number)
             {
@@ -148,6 +167,12 @@ namespace ClassicCar.Controllers
         private bool CarExists(int id)
         {
             return _context.Car.Any(e => e.Ad_Number == id);
+        }
+
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From[HttpPost]Index: filter on" + searchString;
         }
     }
 }
