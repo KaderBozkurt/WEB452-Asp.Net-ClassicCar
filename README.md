@@ -117,3 +117,10 @@ My Home Page:
 My About Us:
 ![About](https://github.com/KaderBozkurt/WEB452-Asp.Net-ClassicCar/blob/master/wwwroot/img/about.png)
 
+
+10/17/2022
+
+I made Azur public but it couldn't load the Azure List page. Frankly, I don't know about azur, according to my research, there are security probes, but I don't know how to solve them. I  published my project. Home and About US pages are working.
+https://classiccar20221017180417.azurewebsites.net
+
+
