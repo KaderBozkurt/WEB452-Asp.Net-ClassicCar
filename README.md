@@ -1,6 +1,6 @@
 ﻿10/11/2022
  
-Website name: "ClassicCar.com"
+Website name: "ClassicAutoCar.com"
 
 I decided on a creative website about selling classic cars with ASP.NET MVC.
 This website should contain classic car sales information.
